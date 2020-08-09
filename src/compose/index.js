@@ -1,7 +1,7 @@
 import { partialRight, reduce } from "lodash";
 console.log("compose");
 
-const compose = (f, g) => (x) => f(g(x));
+const compose = (f, g) => (...args) => f(g(...args));
 
 const toUpperCase = (x) => x.toUpperCase();
 
@@ -25,5 +25,3 @@ console.log(last(["junpkick", "roundhouse", "uppercut"]));
 /**
  * f(g(h()))
  */
-
- 
